@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "aksnpfusiondev-f480"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "aksnpfusiondev-f480"
+  template:
+    metadata:
+      labels:
+        app: "aksnpfusiondev-f480"
+    spec:
+      containers:
+        - name: "aksnpfusiondev-f480"
+          image: "acrnpfusiondev.azurecr.io/aksnpfusiondev"
+          ports:
+          - containerPort: 80
