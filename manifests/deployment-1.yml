@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "aksnpfusiondev-e930"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "aksnpfusiondev-e930"
+  template:
+    metadata:
+      labels:
+        app: "aksnpfusiondev-e930"
+    spec:
+      containers:
+        - name: "aksnpfusiondev-e930"
+          image: "acrnpfusiondev.azurecr.io/aksnpfusiondev"
+          ports:
+          - containerPort: 80
